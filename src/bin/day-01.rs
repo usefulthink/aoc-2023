@@ -71,7 +71,6 @@ fn string_to_u32(s: &str) -> Option<u32> {
 }
 
 static PATTERN: &str = r"[0-9]|one|t(?:wo|hree)|f(?:our|ive)|s(?:ix|even)|eight|nine";
-
 fn get_calibration_value2(s: &str) -> u32 {
     let matches: Vec<_> = find_overlapping_matches(s, PATTERN);
     let first_match = matches.first().expect("string didnt match");
